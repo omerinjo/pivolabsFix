@@ -1,6 +1,5 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const _ = require('lodash')
 const { Users, Users_likes } = require('../models');
 
 module.exports = {
@@ -11,9 +10,9 @@ module.exports = {
             last_name: req.body.last_name,
             first_name: req.body.first_name
         }
-        await Users.findOne({ where: { email: req.body.email } }).then(async user => {
+        Users.findOne({ where: { email: req.body.email } }).then(user => {
             if (!user) {
-                await Users.create(record).then(registered => {
+                Users.create(record).then(registered => {
                     res.status(200).json({ status: 200, message: 'User registered.' });
                 }).catch(err => {
                     if (!err.statusCode) {
@@ -21,7 +20,6 @@ module.exports = {
                     }
                     next(err);
                 });
-                // res.send("regostrovan")
             }
             else {
                 return res.status(200).json({ msg: `User ${record.email} already exists!` })
@@ -72,15 +70,13 @@ module.exports = {
         })
         if (users.rows) {
             users.rows.map((item, inex) => {
-                console.log(item.Users_likes.length)
             })
             var sortData = users.rows.sort((a, b) => {
-                console.log(b.Users_likes.length, b.Users_likes.length)
                 return b.Users_likes.length - a.Users_likes.length
             })
             res.status(200).json(sortData)
         } else {
-            res.send("nema")
+            return res.send("nema")
         }
     },
 
@@ -117,7 +113,7 @@ module.exports = {
 
         var fan = await Users_likes.findOne({ where: { like: like, user_id: user } })
         if (!fan) {
-            await Users_likes.create({
+            Users_likes.create({
                 like,
                 user_id: user
             }).then(() => res.status(200).json({ msg: "User liked!" }))
@@ -135,7 +131,7 @@ module.exports = {
 
         var fan = await Users_likes.findOne({ where: { like: like, user_id: user } })
         if (fan) {
-            await Users_likes.destroy({ where: { like: like, user_id: user } }).then(() => {
+            Users_likes.destroy({ where: { like: like, user_id: user } }).then(() => {
                 res.status(200).json({ msg: "User unliked!" })
             })
         }
@@ -148,16 +144,15 @@ module.exports = {
     changePassword: async (req, res, next) => {
         const user = req.user.id;
         const newPass = await bcrypt.hashSync(req.body.password, 10)
-        await Users.findByPk(user).then(async u => {
-            if (u) {
-                await Users.update(
-                    { password: newPass },
-                    { where: { id: user } }
-                ).then(() => {
-                    res.status(200).json({ msg: "Password change!" })
-                })
-            }
-        })
+        var userData = await Users.findByPk(user)
+        if (userData) {
+            Users.update(
+                { password: newPass },
+                { where: { id: user } }
+            ).then(() => {
+                res.status(200).json({ msg: "Password change!" })
+            })
+        }
 
     },
 
