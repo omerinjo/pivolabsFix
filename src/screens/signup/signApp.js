@@ -35,7 +35,6 @@ class signApp extends Component {
         }
         if (nextProps.Register.data.message) {
             return this.props.history.push('/login')
-            // console.log("novi propovi 38 ", nextProps.Register.data.message)
         }
 
     }
@@ -93,4 +92,4 @@ const matchDispatchToProps = (dispatch) => {
 }
 
 
-export default withRouter(connect(mapStateToProps, matchDispatchToProps)(signApp))
+export default connect(mapStateToProps, matchDispatchToProps)(signApp)

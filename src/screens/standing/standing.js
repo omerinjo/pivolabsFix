@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
 import GuestNavigation from '../../components/layouts/guestNavbar';
@@ -77,4 +76,4 @@ const matchDispatchToProps = (dispatch) => {
     }, dispatch)
 }
 
-export default withRouter(connect(mapStateToProps, matchDispatchToProps)(standing))
+export default connect(mapStateToProps, matchDispatchToProps)(standing)

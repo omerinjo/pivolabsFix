@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Container, Button, Jumbotron, Col, Row } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
 import { getMyProfle } from './action'
 
 
@@ -85,4 +84,4 @@ const matchDispatchToProps = (dispatch) => {
 }
 
 
-export default withRouter(connect(mapStateToProps, matchDispatchToProps)(profile))
+export default connect(mapStateToProps, matchDispatchToProps)(profile)

@@ -119,4 +119,4 @@ const matchDispatchToProps = (dispatch) => {
     }, dispatch)
 }
 
-export default withRouter(connect(mapStateToProps, matchDispatchToProps)(settings))
+export default connect(mapStateToProps, matchDispatchToProps)(settings)

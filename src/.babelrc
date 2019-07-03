@@ -1,7 +1,8 @@
 {
     "plugins": [
         "@babel/plugin-proposal-class-properties",
-        "@babel/plugin-transform-runtime"
+        "@babel/plugin-transform-runtime",
+        "transform-export-extensions"
     ],
     "presets": [
         [
@@ -17,5 +18,9 @@
             }
         ],
         "@babel/preset-react"
+    ],
+    "only": [
+        "./**/*.js",
+        "node_modules/jest-runtime"
     ]
 }

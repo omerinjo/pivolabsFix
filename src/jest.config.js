@@ -46,7 +46,7 @@ module.exports = {
             "branches": 78,
             "functions": 90,
             "lines": 90,
-            "statements": 90
+            "statements": 90,
         }
     },
 
@@ -158,9 +158,8 @@ module.exports = {
 
     // A map from regular expressions to paths to transformers
     transform: {
-        "^\\.js?$": "babel-jest"
+        "^.+\\.js$": "babel-jest"
     },
-
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
     transformIgnorePatterns: ['<rootDir>/node_modules/'],
 

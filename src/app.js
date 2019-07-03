@@ -15,19 +15,17 @@ class App extends Component {
 
     render() {
         return (
-            <Provider store={store}>
-                <div className='app-container'>
-                    <BrowserRouter>
-                        <Switch >
-                            <Route exact path='/' component={SignUp} />
-                            <Route exact path='/login' component={Login} />
-                            <Route exact path='/profile' component={Profile} />
-                            <Route exact path='/settings' component={Settings} />
-                            <Route exact path='/standing' component={Standing} />
-                        </Switch>
-                    </BrowserRouter>
-                </div>
-            </Provider>
+            <div className='app-container'>
+                <BrowserRouter>
+                    <Switch >
+                        <Route exact path='/' component={SignUp} />
+                        <Route exact path='/login' component={Login} />
+                        <Route exact path='/profile' component={Profile} />
+                        <Route exact path='/settings' component={Settings} />
+                        <Route exact path='/standing' component={Standing} />
+                    </Switch>
+                </BrowserRouter>
+            </div>
         );
     }
 }

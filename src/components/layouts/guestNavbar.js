@@ -6,13 +6,9 @@ import { Link } from 'react-router-dom'
 
 const GuestNavihation = (props) => {
 
-    function logOut() {
-        localStorage.removeItem('jwtToken')
-        location.reload()
-    }
 
     return (
-        <Navbar className="navbar-container" expand="lg" bg="light">
+        <Navbar className="navbar-container" expand="lg" bg="light" data-test="guestNavigation">
             <Link to='/' className="nav-link">Home </Link>
             <Nav className="mr-auto">
                 <Link to='/login' className="nav-link">Login </Link>

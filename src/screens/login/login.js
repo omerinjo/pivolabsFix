@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import { withRouter } from 'react-router-dom';
 import { loginUser } from './action';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -74,9 +73,10 @@ class login extends Component {
     render() {
         var navigation = this.state.user ? <UserNavigation /> : <GuestNavigation />
         return (
-            <Container className='justify-content-md-center'>
+            <Container className='justify-content-md-center omer'>
                 {navigation}
                 <LoginForm
+                    className="omer"
                     handleLogin={this.handleLogin}
                     handleInput={this.handleInput}
                 />
@@ -93,7 +93,6 @@ class login extends Component {
 const mapStateToProps = (state) => {
     return {
         Login: state.Login,
-
     }
 }
 
@@ -103,4 +102,4 @@ const matchDispatchToProps = (dispatch) => {
     }, dispatch)
 }
 
-export default withRouter(connect(mapStateToProps, matchDispatchToProps)(login))
+export default connect(mapStateToProps, matchDispatchToProps)(login)

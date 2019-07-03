@@ -4,7 +4,7 @@ import { Form, Button, } from 'react-bootstrap';
 
 const changePassword = (props) => {
     return (
-        <Form onSubmit={props.handleChange}>
+        <Form onSubmit={props.handleChange} >
             <Form.Group controlId="formGroupPassword">
                 <Form.Label>Enter new password</Form.Label>
                 <Form.Control type={props.type} name="password" placeholder="Enter new password" onChange={props.handleInput} />
