@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login> rendering render correctly 1`] = `
+Array [
+  <div
+    className="justify-content-md-center omer container"
+  >
+    <nav
+      className="navbar-container navbar navbar-expand-lg navbar-light bg-light"
+      data-test="guestNavigation"
+    >
+      <a
+        className="nav-link"
+        href="/"
+        onClick={[Function]}
+      >
+        Home 
+      </a>
+      <div
+        className="mr-auto navbar-nav"
+        onKeyDown={[Function]}
+      >
+        <a
+          className="nav-link"
+          href="/login"
+          onClick={[Function]}
+        >
+          Login 
+        </a>
+        <a
+          className="nav-link"
+          href="/standing"
+          onClick={[Function]}
+        >
+          Standing 
+        </a>
+      </div>
+    </nav>
+    <form
+      className=""
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGroupEmail"
+        >
+          Email address
+        </label>
+        <input
+          className="form-control"
+          id="formGroupEmail"
+          onChange={[Function]}
+          placeholder="Enter email"
+          type="email"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGroupPassword"
+        >
+          Password
+        </label>
+        <input
+          className="form-control"
+          id="formGroupPassword"
+          onChange={[Function]}
+          placeholder="Password"
+          type="password"
+        />
+      </div>
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>,
+  " ",
+]
+`;
