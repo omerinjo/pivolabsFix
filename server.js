@@ -3,14 +3,13 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const app = express();
 const logger = require('morgan');
-
+const app = express();
 // Config middlewares
-app.use(cors({ origin: true }));
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(logger('dev'));
+app.use(cors({ origin: true }));
 
 // Load routes
 const Routes = require('./routes');
@@ -23,5 +22,5 @@ _routesArr.forEach(r => {
 });
 
 
-const port = process.env.PORT || 3000
-app.listen(port, () => { console.log(`server started on port ${port}`) })
+
+module.exports = app

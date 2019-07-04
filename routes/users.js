@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const userCtrl = require('../contollers/users');
 const passport = require('passport');
-require('../config/passport')
+//require('../config/passport')
 
 const { validate, schema } = require('../config/validation')
 

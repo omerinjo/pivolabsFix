@@ -157,9 +157,9 @@ module.exports = {
     },
 
 
-    protect: async (req, res, next) => {
-        console.log("hit")
-        res.json({ msg: "radi" })
+    protect: (req, res, next) => {
+
+        return res.json({ msg: "radi" })
     }
 }
 
