@@ -1,130 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Home> rendering render correctly 1`] = `
-Array [
+<div
+  className="container"
+>
   <div
-    className="container"
+    className=""
   >
-    <div
-      className=""
+    <nav
+      className="navbar-container navbar navbar-expand-lg navbar-light bg-light"
+      data-test="guestNavigation"
     >
-      <nav
-        className="navbar-container navbar navbar-expand-lg navbar-light bg-light"
-        data-test="guestNavigation"
+      <a
+        className="nav-link"
+        href="/"
+        onClick={[Function]}
+      >
+        Home 
+      </a>
+      <div
+        className="mr-auto navbar-nav"
+        onKeyDown={[Function]}
       >
         <a
           className="nav-link"
-          href="/"
+          href="/login"
           onClick={[Function]}
         >
-          Home 
+          Login 
         </a>
-        <div
-          className="mr-auto navbar-nav"
-          onKeyDown={[Function]}
+        <a
+          className="nav-link"
+          href="/standing"
+          onClick={[Function]}
         >
-          <a
-            className="nav-link"
-            href="/login"
-            onClick={[Function]}
-          >
-            Login 
-          </a>
-          <a
-            className="nav-link"
-            href="/standing"
-            onClick={[Function]}
-          >
-            Standing 
-          </a>
-        </div>
-      </nav>
-    </div>
-    <form
-      className=""
-      onSubmit={[Function]}
+          Standing 
+        </a>
+      </div>
+    </nav>
+  </div>
+  <form
+    className=""
+    onSubmit={[Function]}
+  >
+    <div
+      className="form-group"
     >
-      <div
-        className="form-group"
+      <label
+        className="form-label"
+        htmlFor="validationCustom01"
       >
-        <label
-          className="form-label"
-          htmlFor="validationCustom01"
-        >
-          First Name
-        </label>
-        <input
-          className="form-control"
-          id="validationCustom01"
-          name="first_name"
-          onChange={[Function]}
-          placeholder="Enter first name"
-          type="text"
-        />
-      </div>
-      <div
-        className="form-group"
+        First Name
+      </label>
+      <input
+        className="form-control"
+        id="validationCustom01"
+        name="first_name"
+        onChange={[Function]}
+        placeholder="Enter first name"
+        type="text"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className="form-label"
+        htmlFor="validationCustom02"
       >
-        <label
-          className="form-label"
-          htmlFor="validationCustom02"
-        >
-          Last Name
-        </label>
-        <input
-          className="form-control"
-          id="validationCustom02"
-          name="last_name"
-          onChange={[Function]}
-          placeholder="Enter last name"
-          type="text"
-        />
-      </div>
-      <div
-        className="form-group"
+        Last Name
+      </label>
+      <input
+        className="form-control"
+        id="validationCustom02"
+        name="last_name"
+        onChange={[Function]}
+        placeholder="Enter last name"
+        type="text"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className="form-label"
+        htmlFor="formGroupEmail"
       >
-        <label
-          className="form-label"
-          htmlFor="formGroupEmail"
-        >
-          Email address
-        </label>
-        <input
-          className="form-control"
-          id="formGroupEmail"
-          name="email"
-          onChange={[Function]}
-          placeholder="Enter email"
-          type="email"
-        />
-      </div>
-      <div
-        className="form-group"
+        Email address
+      </label>
+      <input
+        className="form-control"
+        id="formGroupEmail"
+        name="email"
+        onChange={[Function]}
+        placeholder="Enter email"
+        type="email"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className="form-label"
+        htmlFor="formGroupPassword"
       >
-        <label
-          className="form-label"
-          htmlFor="formGroupPassword"
-        >
-          Password
-        </label>
-        <input
-          className="form-control"
-          id="formGroupPassword"
-          name="password"
-          onChange={[Function]}
-          placeholder="Password"
-          type="password"
-        />
-      </div>
-      <button
-        className="btn btn-primary"
-        disabled={false}
-        type="submit"
-      >
-        Submit
-      </button>
-    </form>
-  </div>,
-  " ",
-]
+        Password
+      </label>
+      <input
+        className="form-control"
+        id="formGroupPassword"
+        name="password"
+        onChange={[Function]}
+        placeholder="Password"
+        type="password"
+      />
+    </div>
+    <button
+      className="btn btn-primary"
+      disabled={false}
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
 `;

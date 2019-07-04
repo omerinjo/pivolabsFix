@@ -1,7 +1,6 @@
-import renderer from 'react-test-renderer';
 import configureStore from 'redux-mock-store'
-import { BrowserRouter as Router } from 'react-router-dom';
 
+import { renderComponent } from './index'
 import Home from '../screens/signup/signApp';
 
 const initialState = {};
@@ -17,7 +16,7 @@ beforeEach(() => {
 
 describe('<Home> rendering', () => {
     test('render correctly', () => {
-        const component = renderer.create(<Router><Home store={store} /> </Router>)
+        const component = renderComponent(<Home store={store} />)
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     })

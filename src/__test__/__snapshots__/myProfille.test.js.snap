@@ -1,93 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MyProfile> rendering render correctly 1`] = `
-Array [
-  <div
-    className="container"
+<div
+  className="container"
+>
+  <nav
+    className="navbar-container navbar navbar-expand-lg navbar-light bg-light"
+    data-test="guestNavigation"
   >
-    <nav
-      className="navbar-container navbar navbar-expand-lg navbar-light bg-light"
-      data-test="guestNavigation"
+    <a
+      className="nav-link"
+      href="/"
+      onClick={[Function]}
+    >
+      Home 
+    </a>
+    <div
+      className="mr-auto navbar-nav"
+      onKeyDown={[Function]}
     >
       <a
         className="nav-link"
-        href="/"
+        href="/login"
         onClick={[Function]}
       >
-        Home 
+        Login 
       </a>
-      <div
-        className="mr-auto navbar-nav"
-        onKeyDown={[Function]}
+      <a
+        className="nav-link"
+        href="/standing"
+        onClick={[Function]}
       >
-        <a
-          className="nav-link"
-          href="/login"
-          onClick={[Function]}
-        >
-          Login 
-        </a>
-        <a
-          className="nav-link"
-          href="/standing"
-          onClick={[Function]}
-        >
-          Standing 
-        </a>
-      </div>
-    </nav>
+        Standing 
+      </a>
+    </div>
+  </nav>
+  <div
+    className="jumbotron"
+  >
     <div
-      className="jumbotron"
+      className="container"
+      style={
+        Object {
+          "height": "50vh",
+        }
+      }
     >
       <div
-        className="container"
-        style={
-          Object {
-            "height": "50vh",
-          }
-        }
+        className="row"
       >
         <div
-          className="row"
+          className="col"
         >
-          <div
-            className="col"
-          >
-            <h2>
-              Name
-            </h2>
-            <h2>
-              Email
-            </h2>
-            <h2>
-              My likes
-            </h2>
-          </div>
-          <div
-            className="col"
-          >
-            <h2>
-              
-            </h2>
-            <h2>
-              
-            </h2>
-            <h2>
-              
-            </h2>
-          </div>
+          <h2>
+            Name
+          </h2>
+          <h2>
+            Email
+          </h2>
+          <h2>
+            My likes
+          </h2>
+        </div>
+        <div
+          className="col"
+        >
+          <h2>
+            
+          </h2>
+          <h2>
+            
+          </h2>
+          <h2>
+            
+          </h2>
         </div>
       </div>
-      <button
-        className="btn btn-primary"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        Change password
-      </button>
     </div>
-  </div>,
-  " ",
-]
+    <button
+      className="btn btn-primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Change password
+    </button>
+  </div>
+</div>
 `;

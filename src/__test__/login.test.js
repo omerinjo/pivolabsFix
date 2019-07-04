@@ -1,6 +1,5 @@
-import renderer from 'react-test-renderer';
 import configureStore from 'redux-mock-store'
-import { BrowserRouter as Router } from 'react-router-dom';
+import { renderComponent } from './index'
 
 import Login from '../screens/login/login'
 
@@ -16,7 +15,7 @@ beforeEach(() => {
 
 describe('<Login> rendering', () => {
     test('render correctly', () => {
-        const component = renderer.create(<Router><Login store={store} /> </Router>)
+        const component = renderComponent(<Login store={store} />)
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     })
